@@ -20,4 +20,5 @@ async function main() {
   console.log(resultSet.toString().replace(",", ""));
   console.log(" - Job Complete");
 }
+// Still need to figure out architecture of id.keystore
 require("dcp-client").init("https://scheduler.distributed.computer").then(main);
