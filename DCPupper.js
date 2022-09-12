@@ -15,12 +15,12 @@ async function main() {
   job.public.name = "toUpperCase";
 
   // Not mandatory console logs for status updates
-  job.on("accepted", () => {
-    console.log(` - Job accepted with id: ${job.id}`);
-  });
-  job.on("result", (ev) => {
-    console.log(` - Received result ${ev}`);
-  });
+  // job.on("accepted", () => {
+  //   console.log(` - Job accepted with id: ${job.id}`);
+  // });
+  // job.on("result", (ev) => {
+  //   console.log(` - Received result ${ev}`);
+  // });
 
   // SKIP IF: you do not need a compute group
   // job.computeGroups = [{ joinKey: 'KEY', joinSecret: 'SECRET' }];
