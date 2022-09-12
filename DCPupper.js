@@ -14,6 +14,13 @@ async function main() {
   const job = compute.for(inputSet, workFunction);
   job.public.name = "toUpperCase";
 
+  // Not mandatory console logs for status updates
+  job.on("accepted", () => {
+    console.log(` - Job accepted with id: ${job.id}`);
+  });
+  job.on("result", (ev) => {
+    console.log(` - Received result ${ev}`);
+  });
   /* PROCESS RESULTS */
   let resultSet = await job.exec();
   resultSet = Array.from(resultSet);
