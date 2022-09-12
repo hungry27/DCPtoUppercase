@@ -21,6 +21,10 @@ async function main() {
   job.on("result", (ev) => {
     console.log(` - Received result ${ev}`);
   });
+
+  // SKIP IF: you do not need a compute group
+  // job.computeGroups = [{ joinKey: 'KEY', joinSecret: 'SECRET' }];
+
   /* PROCESS RESULTS */
   let resultSet = await job.exec();
   resultSet = Array.from(resultSet);
