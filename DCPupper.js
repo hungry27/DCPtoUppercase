@@ -25,6 +25,7 @@ async function main() {
   // SKIP IF: you do not need a compute group
   // job.computeGroups = [{ joinKey: 'KEY', joinSecret: 'SECRET' }];
 
+  //IDK why it keeps requesting passwords
   /* PROCESS RESULTS */
   let resultSet = await job.exec();
   resultSet = Array.from(resultSet);
